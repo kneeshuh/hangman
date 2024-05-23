@@ -39,10 +39,16 @@ type KeyboardProps = {
 
 export default function Keyboard({ disabled, activeLetters, inactiveLetters, addGuessedLetter }: KeyboardProps) {
   return (
+    // <div style={{
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     margin: '25px'
+    // }}>
     <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(75px, 1fr)',
-        gap: '.5rem'
+        gridTemplateColumns: 'repeat(auto-fit, minmax(25px, 1fr)',
+        gap: '.3rem',
+        margin: '25px'
     }}>
         {keys.map(key => {
             const isActive = activeLetters.includes(key)
@@ -56,5 +62,6 @@ export default function Keyboard({ disabled, activeLetters, inactiveLetters, add
                 </button>
         })}
     </div>
+    // </div>
   )
 }

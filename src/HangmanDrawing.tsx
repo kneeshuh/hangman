@@ -5,32 +5,32 @@ const head = (
         height: '50px',
         width: '50px',
         borderRadius: '100%',
-        border: '10px solid black',
+        border: '7px solid black',
         position: 'absolute',
-        top: '45px',
-        right: '-30px'
+        top: '35px',
+        right: '20px'
     }}/> 
 )
 
 const body = (
     <div style={{
-        height: '100px',
-        width: '10px',
+        height: '75px',
+        width: '7px',
         background: 'black',
         position: 'absolute',
-        top: '110px',
-        right: '0px'
+        top: '95px',
+        right: '50px'
     }}/>
 )
 
 const rightArm = (
     <div style={{
-        height: '10px',
-        width: '100px',
+        height: '7px',
+        width: '70px',
         background: 'black',
         position: 'absolute',
-        top: '150px',
-        right: '-95px',
+        top: '135px',
+        right: '-20px',
         rotate: '-30deg',
         transformOrigin: 'left bottom'
     }}/>
@@ -38,12 +38,12 @@ const rightArm = (
 
 const leftArm = (
     <div style={{
-        height: '10px',
-        width: '100px',
+        height: '7px',
+        width: '70px',
         background: 'black',
         position: 'absolute',
-        top: '150px',
-        right: '5px',
+        top: '135px',
+        right: '55px',
         rotate: '30deg',
         transformOrigin: 'right bottom'
     }}/>
@@ -51,12 +51,12 @@ const leftArm = (
 
 const rightLeg = (
     <div style={{
-        height: '10px',
-        width: '100px',
+        height: '7px',
+        width: '80px',
         background: 'black',
         position: 'absolute',
-        top: '200px',
-        right: '-90px',
+        top: '163px',
+        right: '-23px',
         rotate: '60deg',
         transformOrigin: 'left bottom'
     }}/>
@@ -64,18 +64,18 @@ const rightLeg = (
 
 const leftLeg = (
     <div style={{
-        height: '10px',
-        width: '100px',
+        height: '7px',
+        width: '80px',
         background: 'black',
         position: 'absolute',
-        top: '200px',
-        right: '0px',
+        top: '163px',
+        right: '50px',
         rotate: '-60deg',
         transformOrigin: 'right bottom'
     }}/>
 )
 
-const bodyParts = [head, body, rightArm, leftArm, rightLeg, leftLeg]
+const bodyParts = [head, body, leftArm, rightArm, rightLeg, leftLeg]
 
 type HangmanDrawingProps = {
     numberOfGuesses: number
@@ -88,29 +88,30 @@ export default function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps)
     }}>
         {bodyParts.slice(0, numberOfGuesses)}
         <div style={{
-            height: '50px',
-            width: '10px',
+            height: '40px',
+            width: '7px',
             background: 'black',
             position: 'absolute',
             top: 0,
-            right: 0
+            right: 50
         }}/>
         <div style={{
-            height: '10px',
+            height: '7px',
+            width: '100px',
+            background: 'black',
+            marginLeft: '50px'
+        }}/>
+        <div style={{
+            height: '300px',
+            width: '7px',
+            background: 'black',
+            marginLeft: '50px'
+        }}/>
+        <div style={{
+            height: '7px',
             width: '200px',
             background: 'black',
-            marginLeft: '120px'
-        }}/>
-        <div style={{
-            height: '400px',
-            width: '10px',
-            background: 'black',
-            marginLeft: '120px'
-        }}/>
-        <div style={{
-            height: '10px',
-            width: '250px',
-            background: 'black'
+            marginLeft: '5px'
         }}/>
     </div>
   )

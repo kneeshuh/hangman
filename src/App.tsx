@@ -60,8 +60,11 @@ function App() {
       alignItems: 'center'
     }}>
       <div style={{
-        fontSize: '2rem',
-        textAlign: 'center'
+        fontSize: '1rem',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        fontFamily: 'monospace'
       }}>
         {isWinner && "You've Won! Refresh to start again"}
         {isLoser && "You've Lost! Refresh to try again"}
