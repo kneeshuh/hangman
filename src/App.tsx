@@ -1,3 +1,5 @@
+// fix styling -- too big on a page, can't see keyboard and hangman and win/lose all at once, centre hangman more, make everything smaller and less in your face
+
 import { useCallback, useEffect, useState } from "react";
 import words from './wordList.json';
 import HangmanDrawing from "./HangmanDrawing";
@@ -58,8 +60,11 @@ function App() {
       alignItems: 'center'
     }}>
       <div style={{
-        fontSize: '2rem',
-        textAlign: 'center'
+        fontSize: '1rem',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        fontWeight: 'bold',
+        fontFamily: 'monospace'
       }}>
         {isWinner && "You've Won! Refresh to start again"}
         {isLoser && "You've Lost! Refresh to try again"}
